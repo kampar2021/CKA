@@ -12,14 +12,14 @@
     sudo apt-get update ; clear
     sudo apt-get install -y docker-ce
     
-    sudo vi /etc/docker/daemon.json
-    
+    # docker daemon config for systemd from cgroupfs & restart 
+	cat <<EOF > /etc/docker/daemon.json
 	{
-    		"exec-opts": ["native.cgroupdriver=systemd"]
+  	"exec-opts": ["native.cgroupdriver=systemd"]
 	}
+	EOF
+	systemctl daemon-reload && systemctl restart docker
     
-    sudo service docker restart
-  
     
     ### INSTALL KUBEADM,KUBELET,KUBECTL
 
