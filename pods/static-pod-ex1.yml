@@ -4,7 +4,6 @@ metadata:
   name: static-tomcat-pod
 spec:
   containers:
-  - name: tomcat
-    image: tomcat
+  - name: n1
     ports:
      - containerPort: 8080
