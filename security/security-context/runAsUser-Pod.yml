@@ -8,4 +8,4 @@ spec:
     image: ubuntu
     command: ["/bin/sleep", "1800"]
     securityContext:
-      runAsUser: 405
+      runAsUser: 600
