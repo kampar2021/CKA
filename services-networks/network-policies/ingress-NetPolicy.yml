@@ -1,15 +1,15 @@
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: db-netpolicy
+  name: jumppod-netpolicy
 spec:
   podSelector:
     matchLabels:
-      app: db
+      app: secure-app
   ingress:      
   - from:
     - podSelector:
         matchLabels:
-          app: web
+          tier: jumppod
           #    ports:
           #    - port: 80 
