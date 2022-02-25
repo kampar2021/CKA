@@ -5,7 +5,7 @@ metadata:
   labels:
     name: multischeduler-example
 spec:
-  schedulerName: my-scheduler
+  schedulerName: CustomScheduler
   containers:
   - name: cont
     image: nginx

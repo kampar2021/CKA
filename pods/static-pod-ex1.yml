@@ -1,9 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: static-tomcat-pod
+  name: static-nginx-pod
 spec:
   containers:
   - name: n1
+    image: nginx
     ports:
      - containerPort: 8080

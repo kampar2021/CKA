@@ -17,7 +17,7 @@ spec:
      spec:
        containers:
         - name: mydaemonsetcont
-          image: lerndevops/tomcat:8.5.47
+          image: nginx
           ports:
            - containerPort: 8080
           resources:
