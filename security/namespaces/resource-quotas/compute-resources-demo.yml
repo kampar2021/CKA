@@ -1,18 +1,15 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: teama
+  name: tenant-b-100mi
   labels:
     name: development
 ---
 apiVersion: v1
 kind: ResourceQuota
 metadata:
-  name: compute-resources-demo
-  namespace: teama
+  name: nsq
+  namespace: tenant-b-100mi
 spec:
   hard:
-    requests.cpu: "1"
-    requests.memory: 1Gi
-    limits.cpu: "2"
-    limits.memory: 2Gi
+    limits.memory: 100Mi
