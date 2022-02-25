@@ -5,10 +5,10 @@ metadata:
 spec:
   containers:
    - name: myvolumes-container
-     image: tomcat:8.5
+     image: nginx
      volumeMounts:
       - name: pv
-        mountPath: "/usr/local/tomcat/logs"
+        mountPath: "/mnt/readonly"
   volumes:
    - name: pv
      persistentVolumeClaim:
